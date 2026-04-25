@@ -5,28 +5,26 @@ from datetime import datetime
 with open('data.json', 'r', encoding='utf-8') as f:
     data = json.load(f)
 
-# Retro ASCII Başlık
-readme = "```text\n"
-readme += "╔════════════════════════════════════════════════════════╗\n"
-readme += f"║ USER: {data['header']['title']:<48} ║\n"
-readme += f"║ STAT: {data['header']['status']:<48} ║\n"
-readme += f"║ MODE: {data['header']['focus']:<48} ║\n"
-readme += "╚════════════════════════════════════════════════════════╝\n\n"
+# Modern ve Minimalist Başlık
+readme = "<div align='center'>\n\n"
+readme += f"# {data['header']['title']}\n"
+readme += f"**{data['header']['focus']}**\n\n"
+readme += "</div>\n\n"
 
-readme += f"LAST_LOGIN: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n"
+readme += "---\n\n"
+readme += "### ⚡ Projeler & Altyapılar\n\n"
 
-readme += "> ./list_projects.sh\n"
-readme += "----------------------------------------------------------\n"
-
-# Projeleri terminal listesi gibi yazdır
+# Projeleri modern bir blok alıntı (blockquote) tasarımıyla yazdır
 for p in data['projects']:
-    readme += f"[{p['name'].upper()}] - {p['type']}\n"
-    readme += f"  > Status : {p['status']}\n"
-    readme += f"  > Desc   : {p['desc']}\n"
-    readme += f"  > Stack  : {p['tech']}\n"
-    readme += "----------------------------------------------------------\n"
+    # Eski ASCII çubuklarını (örn: [████░░░░] ) temizle
+    status_text = p['status'].split('] ')[-1] if '] ' in p['status'] else p['status']
+    
+    readme += f"#### **{p['name']}**\n"
+    readme += f"> {p['desc']}\n>\n"
+    readme += f"> **Kategori:** `{p['type']}` | **Durum:** `{status_text}` | **Stack:** `{p['tech']}`\n\n"
 
-readme += "```\n"
+readme += "---\n"
+readme += f"<p align='right'><sub>Son Güncelleme: {datetime.now().strftime('%Y-%m-%d')}</sub></p>\n"
 
 # README.md dosyasını oluştur
 with open('README.md', 'w', encoding='utf-8') as f:
