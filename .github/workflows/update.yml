@@ -4,9 +4,13 @@ on:
     paths:
       - 'data.json'
       - 'generate.py'
-  workflow_dispatch: # Manuel tetikleme butonu ekler
+  workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *' # Her gece UTC 00:00'da çalışır
+    - cron: '0 0 * * *'
+
+# GITHUB BOTUNA YAZMA İZNİNİ ZORLA VEREN KISIM
+permissions:
+  contents: write 
 
 jobs:
   build:
