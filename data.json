@@ -1,28 +1,23 @@
 {
-  "header": {
-    "title": "emir_berkay_kumcu",
-    "status": "system online",
-    "focus": "High-performance software & Wildlife Data"
-  },
   "projects": [
     {
       "name": "Wordaryum",
       "type": "Desktop Vault",
-      "status": "[████████░░] Active",
+      "status": "Active",
       "desc": "Kişisel bir kelime yönetim ve depolama kasası.",
       "tech": "AI-Augmented"
     },
     {
       "name": "Project Puncher",
       "type": "Digital Ephemera",
-      "status": "[██████░░░░] WIP",
+      "status": "WIP",
       "desc": "Dijital koleksiyon ve karalama aracı.",
       "tech": "Rust, Tauri"
     },
     {
       "name": "FaunaTR",
       "type": "Wildlife DB",
-      "status": "[████░░░░░░] Dev",
+      "status": "Dev",
       "desc": "Türkiye faunası için tür veritabanı platformu.",
       "tech": "Data, Taxonomy"
     }
