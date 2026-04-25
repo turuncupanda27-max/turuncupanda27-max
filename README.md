@@ -1,13 +1,4 @@
-<div align='center'>
-
-# emir_berkay_kumcu
-**High-performance software & Wildlife Data**
-
-</div>
-
----
-
-### ⚡ Projeler & Altyapılar
+### ⚡ Projeler
 
 #### **Wordaryum**
 > Kişisel bir kelime yönetim ve depolama kasası.
@@ -25,4 +16,3 @@
 > **Kategori:** `Wildlife DB` | **Durum:** `Dev` | **Stack:** `Data, Taxonomy`
 
 ---
-<p align='right'><sub>Son Güncelleme: 2026-04-25</sub></p>
