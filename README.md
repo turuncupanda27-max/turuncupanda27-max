@@ -1,27 +1,28 @@
-```text
-╔════════════════════════════════════════════════════════╗
-║ USER: emir_berkay_kumcu                                ║
-║ STAT: system online                                    ║
-║ MODE: High-performance software & Wildlife Data        ║
-╚════════════════════════════════════════════════════════╝
+<div align='center'>
 
-LAST_LOGIN: 2026-04-25 13:42:37
+# emir_berkay_kumcu
+**High-performance software & Wildlife Data**
 
-> ./list_projects.sh
-----------------------------------------------------------
-[WORDARYUM] - Desktop Vault
-  > Status : [████████░░] Active
-  > Desc   : Kişisel bir kelime yönetim ve depolama kasası.
-  > Stack  : AI-Augmented
-----------------------------------------------------------
-[PROJECT PUNCHER] - Digital Ephemera
-  > Status : [██████░░░░] WIP
-  > Desc   : Dijital koleksiyon ve karalama aracı.
-  > Stack  : Rust, Tauri
-----------------------------------------------------------
-[FAUNATR] - Wildlife DB
-  > Status : [████░░░░░░] Dev
-  > Desc   : Türkiye faunası için tür veritabanı platformu.
-  > Stack  : Data, Taxonomy
-----------------------------------------------------------
-```
+</div>
+
+---
+
+### ⚡ Projeler & Altyapılar
+
+#### **Wordaryum**
+> Kişisel bir kelime yönetim ve depolama kasası.
+>
+> **Kategori:** `Desktop Vault` | **Durum:** `Active` | **Stack:** `AI-Augmented`
+
+#### **Project Puncher**
+> Dijital koleksiyon ve karalama aracı.
+>
+> **Kategori:** `Digital Ephemera` | **Durum:** `WIP` | **Stack:** `Rust, Tauri`
+
+#### **FaunaTR**
+> Türkiye faunası için tür veritabanı platformu.
+>
+> **Kategori:** `Wildlife DB` | **Durum:** `Dev` | **Stack:** `Data, Taxonomy`
+
+---
+<p align='right'><sub>Son Güncelleme: 2026-04-25</sub></p>
