@@ -1,18 +1,33 @@
 import json
+from datetime import datetime
 
-with open("data.json", "r", encoding="utf-8") as f:
+# Veriyi yükle
+with open('data.json', 'r', encoding='utf-8') as f:
     data = json.load(f)
 
-readme = f"""
-# 👋 Profilim
+# Retro ASCII Başlık
+readme = "```text\n"
+readme += "╔════════════════════════════════════════════════════════╗\n"
+readme += f"║ USER: {data['header']['title']:<48} ║\n"
+readme += f"║ STAT: {data['header']['status']:<48} ║\n"
+readme += f"║ MODE: {data['header']['focus']:<48} ║\n"
+readme += "╚════════════════════════════════════════════════════════╝\n\n"
 
-📊 Bugün öğrenilen kelime: {data["gunluk"]}  
-🌍 Aktif dil: {data["dil"]}  
-📚 Toplam kelime: {data["kelime"]}  
+readme += f"LAST_LOGIN: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n"
 
----
-🚀 Bu profil otomatik güncelleniyor.
-"""
+readme += "> ./list_projects.sh\n"
+readme += "----------------------------------------------------------\n"
 
-with open("README.md", "w", encoding="utf-8") as f:
+# Projeleri terminal listesi gibi yazdır
+for p in data['projects']:
+    readme += f"[{p['name'].upper()}] - {p['type']}\n"
+    readme += f"  > Status : {p['status']}\n"
+    readme += f"  > Desc   : {p['desc']}\n"
+    readme += f"  > Stack  : {p['tech']}\n"
+    readme += "----------------------------------------------------------\n"
+
+readme += "```\n"
+
+# README.md dosyasını oluştur
+with open('README.md', 'w', encoding='utf-8') as f:
     f.write(readme)
